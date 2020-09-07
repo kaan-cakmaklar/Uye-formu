@@ -1,0 +1,173 @@
+<html>
+<body>
+    <script>
+        function create_user()
+    {
+        name = document.getElementById("name").value;
+        surname = document.getElementById("surname").value;
+        username = document.getElementById("username").value;
+        password1 = document.getElementById("password1").value;
+        password2 = document.getElementById("password2").value;
+        email = document.getElementById("email").value;
+        day = document.getElementById("day").value;
+        month = document.getElementById("month").value;
+        year = document.getElementById("year").value;
+
+
+        if(password1 != password2) {
+            alert("1. şifre ile 2. şifre uyuşmuyor!");
+            return;
+        }
+        
+       
+        if (name.trim().length == 0  ) {
+             alert('Lütfen Adınızı giriniz!');
+             return;
+        }
+            
+        if(surname.trim().length == 0 ) {
+             alert('Lütfen soyadınızı giriniz!');
+             return;
+        }
+
+        if(username.trim().length == 0 ) {
+            alert('Lütfen kullanıcı adınızı giriniz!');
+            return;
+        }
+        
+        
+        if(password1.trim().length == 0 ) {
+            alert('Lütfen birinci şifrenizi giriniz!');
+            return;
+        }
+
+
+        if(password2.trim().length == 0 ) {
+            alert('Lütfen ikinci şifrenizi giriniz!');
+            return;
+        }
+        
+
+        if(email.trim().length == 0 ) {
+            alert('Lütfen mail adresinizi giriniz!');
+            return;
+        }
+        
+
+        if(day.trim().length == 0 ) {
+            alert('Yaşınızı giriniz!');
+            return;
+        }
+        
+        
+        if(month.trim().length == 0 ) {
+            alert('Hangi ayda doğduğunuzu giriniz!');
+            return;
+        }
+        
+
+        if(year.trim().length == 0 ) {
+            alert('Hangi yılda doğduğunuzu giriniz!');
+            return;
+        }
+
+        alert('Tebrikler, kaydınız başarılı bir şekilde gerçekleşmiştir!')
+        
+    }
+
+    function message(x)
+    {
+        alert(x);
+
+    }
+    </script>
+            <table>
+                 <tr>  
+                     <td>Name</td>
+                     <td>:<input type="name" name="ad" id="name" placeholder="kullanıcı adınızı giriniz" required="required"></td>
+                 </tr>
+                 <tr>
+                     <td>Surname</td>
+                     <td>:<input type="surname" name="surname" id="surname" placeholder="soyad giriniz" required="required"></td>
+                 </tr>
+                 <tr>
+                     <td>Username:</td>
+                     <td>:<input type="username" name="user name" id="username" placeholder="username giriniz" required="required"></td>
+                 </tr>
+                 <tr>
+                     <td>Password</td>
+                     <td>:<input type="password" placeholder="şifre giriniz" id="password1" required="required"></td>
+                 </tr>
+                 <tr>
+                     <td>Password</td>
+                     <td>:<input type="password" placeholder="şifreyi yeniden giriniz" id="password2" required="required"></td>
+                 </tr>
+                 <tr>
+                     <td>email</td>
+                     <td>:<input type="email" placeholder="Email giriniz" id="email" required="required"></td>
+                 </tr>
+                 <tr>
+                     <td>Doğum tarihiniz</td>
+                     <td>
+                        <select id="day" size="1">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <select id="month" size="1">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>                                
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </select>
+                         <select id="year" size="1">
+                         <option value="2003">2003</option>
+                         <option value="2002">2002</option>
+                         <option value="2001">2001</option>
+                         <option value="2000">2000</option>
+                         <option value="1999">1999</option>
+                     </select> </td>
+                 </tr>
+                 <tr>
+                     <td><button onclick="create_user()">Kaydet</button></td>
+                 </tr>
+             </table>    
+</body>
+</html>
